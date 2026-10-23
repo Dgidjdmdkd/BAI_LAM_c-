@@ -62,6 +62,13 @@ bool psum2(vector<in> vt , in k){
     }
     return false;
 }
+
+// find max - min in array
+void find_mx_mn(vector<in> vt){
+    in mx = *max_element(vt.begin(),vt.end());
+    in mn = *min_element(vt.begin(),vt.end());
+}
+
 // decimal to binary
 string dectobi(ll te){
     if(te <= 0) return "0";
