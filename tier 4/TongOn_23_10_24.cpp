@@ -2,7 +2,7 @@
 #include <bits/stdc++.h>
 #define BL "TEST"
 #define el "\n"
-#define ll long long
+typedef long long ll;
 
 using namespace std;
 
