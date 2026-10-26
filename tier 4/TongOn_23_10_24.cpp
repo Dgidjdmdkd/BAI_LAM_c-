@@ -15,7 +15,7 @@ void VO(){
     freopen(BL".OUT","w",stdout);
 }
 
-// ===== PRIME & DIVISOR =====
+// PRIME & DIVISOR
 vector<bool> sieve_of_e(in n){
     vector<bool> sieve(n+1,true);
     sieve[0] = sieve[1] = false;
@@ -64,7 +64,7 @@ ll count_divisors(ll n){
     return cnt;
 }
 
-// ===== SLIDING WINDOW / GREEDY =====
+// SLIDING WINDOW / GREEDY 
 //maxsum contiguous subarray || sd sliding windows || k cố định
 ll mxsumc (vector<in> & vt , int k){
     in n = vt.size();
@@ -79,7 +79,7 @@ ll mxsumc (vector<in> & vt , int k){
     return mxsum;
 }
 
-// ===== TWO POINTERS =====
+// TWO POINTERS
 // find sum of 2 numbers in an array equal k (sorted)
 bool psum2(vector<in> vt , in k){
     sort(vt.begin(), vt.end());
@@ -100,7 +100,7 @@ pair<in, in> find_mx_mn(vector<in> vt){
     return {mx, mn};
 }
 
-// ===== NUMBER SYSTEMS =====
+// NUMBER SYSTEMS
 // decimal to binary
 string dectobi(ll te){
     if(te <= 0) return "0";
@@ -122,7 +122,7 @@ ll bitodec(string s){
     return res;
 }
 
-// ===== GCD / LCM / MODULAR =====
+// GCD / LCM / MODULAR
 ll const MOD = 1e9 + 7;
 
 ll gcd(ll a, ll b){
@@ -160,7 +160,7 @@ ll modinv(ll a){
     return binapow(a, MOD - 2);
 }
 
-// ===== SPECIAL NUMBERS =====
+// SPECIAL NUMBERS
 // perfect square
 bool specnum (ll t){
     ll sq = (ll) sqrt(t);
@@ -182,7 +182,7 @@ bool specnum_2 (ll t){
     return sum == t;
 }
 
-// ===== SORTING =====
+// SORTING
 struct ptu{
     in val , key;
 };
@@ -192,7 +192,7 @@ bool cmp_1 (ptu a, ptu b){
     return a.key > b.key;
 }
 
-// ===== PREFIX SUM =====
+// PREFIX SUM 
 // prefix sum 1d
 vector<ll> buildprefix(vector<in> vt, in n){
     vector<ll> pref(n + 1, 0);
@@ -216,7 +216,7 @@ ll query2d(vector<vector<ll>>& pref2d, in r1, in c1, in r2, in c2){
     return pref2d[r2][c2] - pref2d[r1-1][c2] - pref2d[r2][c1-1] + pref2d[r1-1][c1-1];
 }
 
-// ===== MATRIX OPERATIONS =====
+// MATRIX OPERATIONS 
 // rotate matrix 90 degrees clockwise (n * n)
 vector<vector<in>> rotate_mtx (vector<vector<in>> vt , in n){
     vector<vector<in>> roted(n, vector<in> (n, 0));
@@ -239,7 +239,7 @@ vector<vector<in>> transpose_mtx(vector<vector<in>> vt, in m, in n){
     return trans;
 }
 
-// ===== DYNAMIC PROGRAMMING =====
+// DYNAMIC PROGRAMMING
 // LIS: Longest Increasing Subsequence (O(n^2))
 in DP_lis_n2(vector<in> vt, in n){
     vector<in> dp(n, 1);
@@ -307,7 +307,7 @@ in coin_change(vector<in>& coins, in amount){
     return dp[amount] == INT_MAX ? -1 : dp[amount];
 }
 
-// ===== SEARCHING & SORTING =====
+// SEARCHING & SORTING 
 // binary search
 in binary_search_idx(vector<in>& vt, in target){
     in l = 0, r = vt.size() - 1;
@@ -320,7 +320,6 @@ in binary_search_idx(vector<in>& vt, in target){
     return -1;
 }
 
-// ===== GRAPH BASICS (tùy chọn) =====
 // Adjacency list
 vector<in> adj[100005];
 
@@ -352,7 +351,6 @@ void bfs(in start){
     }
 }
 
-// ===== UTILITIES =====
 // Fast I/O
 void fast_io(){
     ios_base::sync_with_stdio(false);
